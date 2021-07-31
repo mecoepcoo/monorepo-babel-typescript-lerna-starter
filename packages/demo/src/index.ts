@@ -1,1 +1,3 @@
-export const a = 1
+export const fn = () => {
+  return 1
+}
