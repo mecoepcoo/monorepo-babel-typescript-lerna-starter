@@ -7,6 +7,19 @@ module.exports = {
   // Automatically clear mock calls and instances between every test
   clearMocks: true,
 
+  reporters: [
+    'default',
+    [
+      'jest-html-reporters',
+      {
+        publicPath: './jest-report',
+        filename: 'report.html',
+        expand: false,
+        openReport: false,
+      },
+    ],
+  ],
+
   // Indicates whether the coverage information should be collected while executing the test
   collectCoverage: true,
 
@@ -16,9 +29,9 @@ module.exports = {
   // A list of reporter names that Jest uses when writing coverage reports
   coverageReporters: [
     // "json",
-    "text",
-    "lcov",
-    "clover"
+    'text',
+    'lcov',
+    'clover'
   ],
 
   globals: {
@@ -39,7 +52,7 @@ module.exports = {
   notify: false,
 
   // An enum that specifies notification mode. Requires { notify: true }
-  notifyMode: "always",
+  notifyMode: 'always',
 
   // A list of paths to directories that Jest should use to search for files in
   roots: [
