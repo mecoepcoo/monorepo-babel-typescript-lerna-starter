@@ -1,0 +1,21 @@
+{
+  "name": "@app/demo",
+  "version": "0.0.1",
+  "private": true,
+  "author": "tianzhen<mecoepcoo@vip.qq.com>",
+  "description": "",
+  "keywords": [],
+  "homepage": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.js",
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "http://localhost:4873/"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "build:type": "tsc --project tsconfig.json"
+  }
+}
