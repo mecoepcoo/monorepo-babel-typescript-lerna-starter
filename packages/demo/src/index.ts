@@ -1,3 +1,1 @@
-export const fn = () => {
-  return 1
-}
+export { sum } from './utils/utils'

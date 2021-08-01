@@ -1,5 +1,6 @@
-import { fn } from '../src/index'
+import { sum } from '../src/index'
 
 test('test demo', () => {
-  expect(fn()).toBe(1)
+  expect(sum(1, 2)).toBe(3)
+  expect(sum(-1, 2)).toBe(1)
 })
