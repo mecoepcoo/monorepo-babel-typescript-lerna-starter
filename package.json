@@ -4,10 +4,10 @@
   "author": "tianzhen<mecoepcoo@vip.qq.com>",
   "scripts": {
     "commit": "git add . && cz",
-    "prebuild": "",
+    "prebuild": "npm run build:tsc",
     "build": "npm run build:all",
     "build:all": "lerna exec -- rollup -c=../../rollup.config.js",
-    "build:type": "lerna exec -- tsc --project tsconfig.types.json",
+    "build:tsc": "lerna exec -- tsc --project tsconfig.build.json",
     "lint:ts": "eslint --cache --fix packages/**/*.ts{,x}",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "test": "jest"

@@ -5,6 +5,7 @@ import commonjs from '@rollup/plugin-commonjs'
 import json from '@rollup/plugin-json'
 import nodeResolve from '@rollup/plugin-node-resolve'
 import replace from '@rollup/plugin-replace'
+import babelConfig from './babel.config'
 
 const resolve = function(...args) {
   return path.resolve(__dirname, ...args)
@@ -23,7 +24,7 @@ const extensions = [
 
 const { name, version } = pkg
 
-const output = [
+const outputs = [
   {
     format: 'esm',
     file: path.join(OUTPUT_DIR, pkg.module),
@@ -37,41 +38,34 @@ const output = [
     name: pkg.buildOptions.name,
     file: path.join(OUTPUT_DIR, pkg.unpkg),
   },
-]
+].map((output) => {
+  output.sourcemap = true
+  return output
+})
 
 function createConfig(input, output, plugins = [], override) {
   return merge({
     input,
     output,
     plugins: [
-      // replace({
-      //   preventAssignment: true,
-      //   exclude: 'node_modules/**',
-      //   __VERSION__: JSON.stringify(version),
-      // }),
+      replace({
+        preventAssignment: true,
+        exclude: 'node_modules/**',
+        __VERSION__: JSON.stringify(version),
+      }),
       nodeResolve({ extensions }),
-      // commonjs(),
-      // json(),
+      commonjs(),
+      json(),
       babel({
         extensions,
         babelHelpers: 'bundled',
-        "presets": [
-          [
-            "@babel/env",
-            {
-              "useBuiltIns": "usage",
-              "corejs": "3.15"
-            }
-          ],
-          "@babel/preset-typescript"
-        ],
-        "ignore": ["node_modules"]
+        ...babelConfig,
       }),
       ...plugins,
     ],
   }, override)
 }
 
-const config = createConfig(INPUT_FILE, output)
+const config = createConfig(INPUT_FILE, outputs)
 
 export default config
