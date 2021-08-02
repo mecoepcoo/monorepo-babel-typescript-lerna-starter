@@ -6,8 +6,14 @@
   "description": "",
   "keywords": [],
   "homepage": "",
-  "main": "dist/index.js",
+  "main": "dist/demo.cjs.js",
+  "module": "dist/demo.esm.js",
+  "unpkg": "dist/demo.umd.js",
+  "jsdelivr": "dist/demo.umd.js",
   "types": "dist/index.d.js",
+  "buildOptions": {
+    "name": "demo"
+  },
   "files": [
     "lib"
   ],

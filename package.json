@@ -4,10 +4,10 @@
   "author": "tianzhen<mecoepcoo@vip.qq.com>",
   "scripts": {
     "commit": "git add . && cz",
-    "prebuild": "build:type",
-    "build": "",
-    "build:dev": "",
-    "build:type": "tsc --project tsconfig.types.json",
+    "prebuild": "",
+    "build": "npm run build:all",
+    "build:all": "lerna exec -- rollup -c=../../rollup.config.js",
+    "build:type": "lerna exec -- tsc --project tsconfig.types.json",
     "lint:ts": "eslint --cache --fix packages/**/*.ts{,x}",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "test": "jest"
@@ -39,6 +39,7 @@
     "jest-html-reporters": "^2.1.6",
     "lerna": "^4.0.0",
     "lint-staged": "^11.1.1",
+    "lodash": "^4.17.21",
     "node-notifier": "^10.0.0",
     "prettier": "^2.3.2",
     "rollup": "^2.55.1",
