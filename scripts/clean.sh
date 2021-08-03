@@ -1,2 +1,2 @@
 #!/bin/sh
-# TODO: 清除dist目录
+# TODO: windows执行sh不方便，改用gulp执行

@@ -1,19 +1,12 @@
 {
-  "name": "@app/demo",
-  "version": "0.0.1",
-  "private": true,
+  "name": "@app/demo2",
+  "version": "1.0.0",
   "author": "tianzhen<mecoepcoo@vip.qq.com>",
-  "description": "",
-  "keywords": [],
-  "homepage": "",
-  "main": "dist/demo.cjs.js",
-  "module": "dist/demo.esm.js",
-  "unpkg": "dist/demo.umd.js",
-  "jsdelivr": "dist/demo.umd.js",
+  "main": "dist/demo2.cjs.js",
+  "module": "dist/demo2.esm.js",
+  "unpkg": "dist/demo2.umd.js",
+  "jsdelivr": "dist/demo2.umd.js",
   "types": "dist/index.d.js",
-  "buildOptions": {
-    "name": "demo"
-  },
   "files": [
     "src"
   ],
