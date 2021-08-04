@@ -4,7 +4,8 @@
   "author": "tianzhen<mecoepcoo@vip.qq.com>",
   "scripts": {
     "commit": "git add . && cz",
-    "prebuild1": "npm run build:tsc",
+    "clean": "lerna exec -- rimraf ./dist",
+    "prebuild": "npm run clean && npm run build:tsc",
     "build": "npm run build:all",
     "build:all": "lerna exec -- rollup -c=../../rollup.config.js",
     "build:tsc": "lerna exec -- tsc --project tsconfig.build.json",
@@ -42,6 +43,7 @@
     "lodash": "^4.17.21",
     "node-notifier": "^10.0.0",
     "prettier": "^2.3.2",
+    "rimraf": "^3.0.2",
     "rollup": "^2.55.1",
     "ts-jest": "^27.0.4",
     "typescript": "^4.3.5"
