@@ -1,3 +1,6 @@
+// eslint-disable-next-line import/no-unresolved
+import { sum } from '@app/demo'
+
 export function demo2() {
-  // TODO
+  return sum(1, 2)
 }

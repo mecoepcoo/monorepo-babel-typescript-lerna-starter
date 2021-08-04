@@ -4,7 +4,7 @@
   "author": "tianzhen<mecoepcoo@vip.qq.com>",
   "scripts": {
     "commit": "git add . && cz",
-    "prebuild": "npm run build:tsc",
+    "prebuild1": "npm run build:tsc",
     "build": "npm run build:all",
     "build:all": "lerna exec -- rollup -c=../../rollup.config.js",
     "build:tsc": "lerna exec -- tsc --project tsconfig.build.json",

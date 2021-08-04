@@ -21,14 +21,16 @@
     "noEmitHelpers": true,
     "importHelpers": true,
     "jsx": "react",
-    "baseUrl": "./packages",
+    "rootDir": ".",
+    "baseUrl": ".",
     "paths": {
       "@app/*": ["packages/*/src"],
       "*": ["node_modules", "packages"]
     }
   },
   "include": [
-    "packages"
+    "packages",
+    "jest-dom/extend-expect"
   ],
   "exclude": [
     "node_modules",

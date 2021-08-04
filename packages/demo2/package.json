@@ -7,6 +7,9 @@
   "unpkg": "dist/demo2.umd.js",
   "jsdelivr": "dist/demo2.umd.js",
   "types": "dist/index.d.js",
+  "buildOptions": {
+    "name": "demo2"
+  },
   "files": [
     "src"
   ],
