@@ -8,7 +8,8 @@
       "allowBranch": ["main", "master"],
       "message": "chore(release): publish",
       "noCommitHooks": true,
-      "noPush": true
+      "noPush": true,
+      "noGitTagVersion": true
     }
   }
 }
