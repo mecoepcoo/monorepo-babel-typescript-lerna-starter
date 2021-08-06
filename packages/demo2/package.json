@@ -1,6 +1,6 @@
 {
   "name": "@app/demo2",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "author": "tianzhen<mecoepcoo@vip.qq.com>",
   "main": "dist/demo2.cjs.js",
@@ -22,6 +22,6 @@
     "build:type": "tsc --project tsconfig.json"
   },
   "dependencies": {
-    "@app/demo": "^0.0.1"
+    "@app/demo": "^0.0.2"
   }
 }
