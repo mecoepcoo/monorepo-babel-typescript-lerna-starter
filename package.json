@@ -5,10 +5,14 @@
   "scripts": {
     "commit": "git add . && cz",
     "clean": "lerna exec -- rimraf ./dist",
-    "prebuild": "npm run clean && npm run build:tsc",
+    "bootstrap": "lerna bootstrap",
+    "prebuild": "npm run clean",
+    "postbuild": "npm run build:tsc",
     "build": "npm run build:all",
-    "build:all": "lerna exec -- rollup -c=../../rollup.config.js",
-    "build:tsc": "lerna exec -- tsc --project tsconfig.build.json",
+    "build:all": "lerna exec --parallel -- rollup -c=../../rollup.config.js",
+    "build:tsc": "lerna exec --parallel -- tsc --project tsconfig.build.json",
+    "prerelease": "npm run lint:ts && npm test && npm run build",
+    "release": "lerna publish",
     "lint:ts": "eslint --cache --fix packages/**/*.ts{,x}",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "test": "jest"

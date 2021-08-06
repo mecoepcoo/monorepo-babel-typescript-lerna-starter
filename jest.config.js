@@ -40,6 +40,10 @@ module.exports = {
     },
   },
 
+  moduleNameMapper: {
+    '@app/(.+)$': '<rootDir>packages/$1/src',
+  },
+
   // An array of file extensions your modules use
   moduleFileExtensions: [
     'js',
