@@ -2,5 +2,12 @@
   "packages": [
     "packages/*"
   ],
-  "version": "independent"
+  "version": "independent",
+  "command": {
+    "version": {
+      "allowBranch": ["main", "master"],
+      "message": "chore(release): publish",
+      "noCommitHooks": true
+    }
+  }
 }

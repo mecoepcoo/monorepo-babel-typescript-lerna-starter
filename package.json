@@ -14,7 +14,7 @@
     "prerelease": "npm run lint:ts && npm test && npm run build",
     "release": "lerna publish",
     "lint:ts": "eslint --cache --fix packages/**/*.ts{,x}",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "changelog": "lerna exec --concurrency 1 --stream -- conventional-changelog -p angular --commit-path ./ -k package.json -i CHANGELOG.md -o CHANGELOG.md -l $LERNA_PACKAGE_NAME -s -r 0",
     "test": "jest"
   },
   "devDependencies": {
