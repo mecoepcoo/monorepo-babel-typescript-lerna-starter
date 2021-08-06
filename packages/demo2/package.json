@@ -1,6 +1,6 @@
 {
   "name": "@app/demo2",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "author": "tianzhen<mecoepcoo@vip.qq.com>",
   "main": "dist/demo2.cjs.js",
