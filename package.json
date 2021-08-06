@@ -1,6 +1,6 @@
 {
   "name": "app",
-  "private": true,
+  "private": false,
   "author": "tianzhen<mecoepcoo@vip.qq.com>",
   "scripts": {
     "commit": "git add . && cz",
