@@ -1,5 +1,5 @@
 # Monorepo
-这是一个基于lerna的起步种子项目，旨在为工具库的开发提供开箱即用的 `rollup + typescript + babel + lint + jest` 开发环境。
+这是一个基于[lerna](https://github.com/lerna/lerna)的起步种子项目，旨在为工具库的开发提供开箱即用的 `rollup + typescript + babel + lint + jest` 开发环境。
 
 项目中也已经集成了打包和lint相关的基础配置。
 
